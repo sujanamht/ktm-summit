@@ -19,3 +19,23 @@ video {
 }
 
 /* Custom styles beyond Tailwind's capabilities go below */
+
+/* ── Mobile nav: remove default <details>/<summary> disclosure triangle ── */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ── Trekking mega-menu: ensure it covers the full viewport width
+      even when the page content is narrower than the nav container ── */
+#main-nav {
+  /* already sticky top-0 via Tailwind; confirm no overflow clipping */
+  overflow: visible;
+}
+
+/* ── Smooth dropdown arrow rotation for open <details> ── */
+details[open] > summary svg {
+  transform: rotate(180deg);
+}
