@@ -1,0 +1,43 @@
+In the kathmandu-summit-adventure project, build the shared 
+components that will appear on every page.
+
+1. TOP BAR (above navbar) in index.html:
+   - Left: email icon + kathmandusummitadventure@gmail.com | 
+     phone icon + +977 984 153 7393
+   - Right: social icon links for Facebook, Instagram, TikTok, 
+     LinkedIn, Twitter/X, YouTube (use simple SVG icons or 
+     Unicode symbols)
+   - Background: primary-dark (#0F2340), text white, small text
+
+2. STICKY NAVBAR:
+   - Background: primary (#1A3C5E), text white
+   - Left: Logo text "Kathmandu Summit Adventure" (styled, 
+     no image yet)
+   - Center: nav links — Home, Nepal, Bhutan, Tibet, Trekking, 
+     Placements, Hiking, FAQs, Blog, Contact
+   - Nepal, Bhutan, Tibet, Trekking, Placements, Hiking have 
+     dropdowns — use pure CSS hover dropdowns, no JavaScript
+   - Trekking dropdown has sub-groups: Annapurna Region, 
+     Everest Region, Langtang Region, Manaslu Region, 
+     Adventure Trek — each with their packages listed 
+     (see project doc)
+   - Right: "Book Now" button in secondary (#D97706) color
+   - Sticky on scroll: use CSS position: sticky, top: 0, 
+     z-index: 50
+   - Mobile: hamburger menu toggle using only HTML checkbox 
+     hack (no JS)
+
+3. FOOTER:
+   - Background: primary-dark (#0F2340), text white
+   - Row 1: Company name + short description
+   - Row 2: 3 columns — Quick Links | Destinations | Contact Info
+   - Quick Links: Privacy Policy, Terms & Conditions, About, 
+     Blog, FAQs
+   - Destinations: Tour, Trekking, Nepal, Tibet, Bhutan
+   - Contact: email, phone, social icons
+   - Bottom bar: copyright "© 2026 Kathmandu Summit Adventure 
+     Pvt. Ltd. All Rights Reserved."
+
+Use only HTML and Tailwind CSS. No JavaScript. 
+Extract the navbar and footer into reusable HTML snippets 
+(comment clearly so they can be copy-pasted into other pages).
