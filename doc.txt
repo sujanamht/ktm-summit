@@ -1,43 +1,226 @@
-In the kathmandu-summit-adventure project, build the shared 
-components that will appear on every page.
+# Kathmandu Summit Adventure — Website Rebuild Doc
 
-1. TOP BAR (above navbar) in index.html:
-   - Left: email icon + kathmandusummitadventure@gmail.com | 
-     phone icon + +977 984 153 7393
-   - Right: social icon links for Facebook, Instagram, TikTok, 
-     LinkedIn, Twitter/X, YouTube (use simple SVG icons or 
-     Unicode symbols)
-   - Background: primary-dark (#0F2340), text white, small text
+## 1. BUSINESS OVERVIEW
+Company: Kathmandu Summit Adventure Pvt. Ltd.
+Tagline: "Tour. Trekking. Volunteering. Internship."
+Slogan: "Discover the Culture, People, and Stunning Landscapes of Nepal."
+Email: kathmandusummitadventure@gmail.com
+Phone: +977 984 153 7393
+Location: Kathmandu, Nepal
 
-2. STICKY NAVBAR:
-   - Background: primary (#1A3C5E), text white
-   - Left: Logo text "Kathmandu Summit Adventure" (styled, 
-     no image yet)
-   - Center: nav links — Home, Nepal, Bhutan, Tibet, Trekking, 
-     Placements, Hiking, FAQs, Blog, Contact
-   - Nepal, Bhutan, Tibet, Trekking, Placements, Hiking have 
-     dropdowns — use pure CSS hover dropdowns, no JavaScript
-   - Trekking dropdown has sub-groups: Annapurna Region, 
-     Everest Region, Langtang Region, Manaslu Region, 
-     Adventure Trek — each with their packages listed 
-     (see project doc)
-   - Right: "Book Now" button in secondary (#D97706) color
-   - Sticky on scroll: use CSS position: sticky, top: 0, 
-     z-index: 50
-   - Mobile: hamburger menu toggle using only HTML checkbox 
-     hack (no JS)
+Social:
+- Facebook: /kathmandusummitadventure
+- Instagram: /kathmandusummitadventure
+- TikTok: /@kathmandusummitadventure
+- LinkedIn: /company/kathmandusummitadventure
+- Twitter/X: /kathmandusummit
+- YouTube: /@kathmandusummitadventure
 
-3. FOOTER:
-   - Background: primary-dark (#0F2340), text white
-   - Row 1: Company name + short description
-   - Row 2: 3 columns — Quick Links | Destinations | Contact Info
-   - Quick Links: Privacy Policy, Terms & Conditions, About, 
-     Blog, FAQs
-   - Destinations: Tour, Trekking, Nepal, Tibet, Bhutan
-   - Contact: email, phone, social icons
-   - Bottom bar: copyright "© 2026 Kathmandu Summit Adventure 
-     Pvt. Ltd. All Rights Reserved."
+Certifications:
+- Registered: Company Registration Office, Government of Nepal
+- Licensed: Department of Tourism & Nepal Tourism Board (NTB)
+- Member: Trekking Agency's Association of Nepal (TAAN)
+- Member: Nepal Mountaineering Association (NMA)
 
-Use only HTML and Tailwind CSS. No JavaScript. 
-Extract the navbar and footer into reusable HTML snippets 
-(comment clearly so they can be copy-pasted into other pages).
+---
+
+## 2. BRAND GUIDE
+Primary Color:   #1A3C5E (deep navy blue)
+Primary Light:   #2A5F8F
+Primary Dark:    #0F2340
+Secondary:       #D97706 (amber/gold)
+Secondary Light: #F59E0B
+Secondary Dark:  #B45309
+White:           #FFFFFF
+Neutral Light:   #F9FAFB
+Neutral Dark:    #111827
+
+Font: Inter (Google Fonts)
+Style: Clean, modern, professional, adventure-inspired
+Imagery: Himalayan landscapes, trekking trails, cultural sites
+
+---
+
+## 3. SITE STRUCTURE & PAGES
+
+### Pages to Build:
+1. index.html          — Homepage
+2. trekking.html       — Trekking Packages (hub)
+3. tours.html          — Nepal Tour Packages (hub)
+4. bhutan.html         — Bhutan Tours
+5. tibet.html          — Tibet Tours
+6. hiking.html         — Hiking in Nepal
+7. volunteering.html   — Volunteer & Internship Programs
+8. package.html        — Single Package Detail (reusable template)
+9. blog.html           — Blog listing
+10. contact.html       — Contact page
+11. about.html         — About page
+12. faqs.html          — FAQs
+
+---
+
+## 4. NAVIGATION STRUCTURE
+
+Top bar: Email | Phone | Social icons (Facebook, Instagram, TikTok, LinkedIn, X, YouTube)
+
+Main Nav:
+- Home
+- Nepal (dropdown)
+  - All Nepal Tour Packages
+  - Kathmandu City Sightseeing – 4 Days
+  - Kathmandu & Chitwan – 7 Days
+  - Kathmandu & Pokhara – 7 Days
+  - Kathmandu Pokhara & Chitwan – 8 Days
+  - Chitwan Jungle Safari – 6 Days
+  - Bardia National Park – 4 Days
+  - Educational Excursion – 9 Days
+  - Family Tour – 9 Days
+  - Lumbini Tour – 6 Days
+  - Buddhist Pilgrimage Tour – 8 Days
+  - Helicopter Tour
+- Bhutan (dropdown)
+  - Bhutan Tour – 4 Days
+  - Bhutan Tour – 5N/6D
+- Tibet (dropdown)
+  - Visit Lhasa – 5 Days
+  - Tibet Overland with EBC – 7 Days
+  - Tibet Cultural Tour – 7 Days
+  - Kathmandu Lhasa Group Tour – 8 Days
+- Trekking (dropdown)
+  - Annapurna Region
+    - ABC Trek – 13 Days
+    - Annapurna Circuit – 15 Days
+    - Annapurna Sanctuary – 15 Days
+    - Poon Hill Sunrise – 10 Days
+    - Mardi Himal Base Camp
+    - Annapurna Circuit + Tilicho Lake – 18 Days
+    - Tilicho Lake Trek
+    - Ghorepani Ghandruk – 10 Days
+    - Jomsom Muktinath – 14 Days
+    - Ghorepani Poon Hill – 10 Days
+    - Khopra Danda – 11 Days
+    - Nar Phu Valley – 12 Days
+  - Everest Region
+    - EBC Trek – 15 Days
+    - Everest Gokyo Valley
+    - Ama Dablam Base Camp – 13 Days
+    - Gokyo Lakes & Ri – 14 Days
+    - Everest via Jiri – 21 Days
+    - Everest Cho La Pass – 18 Days
+    - Everest High Pass – 19 Days
+    - Everest Three Passes – 20 Days
+    - Everest Panorama – 11 Days
+    - Everest View – 12 Days
+    - Pikey Peak – 9 Days
+  - Langtang Region
+    - Langtang Valley – 11 Days
+    - Tamang Heritage – 14 Days
+    - Langtang Circuit – 16 Days
+    - Langtang Gosainkunda
+    - Helambu Trek
+  - Manaslu Region
+    - Manaslu Circuit – 18 Days
+    - Manaslu Larke Pass – 16 Days
+    - Manaslu Tsum Valley – 23 Days
+  - Adventure Trek
+    - Upper Mustang Trek
+    - Makalu Base Camp – 22 Days
+    - Upper Dolpo – 25 Days
+- Placements (dropdown)
+  - Volunteer in Nepal
+  - Internship in Nepal
+  - Volunteering with Tour or Trek
+  - Volunteer Program Fees
+- Hiking (dropdown)
+  - Budhanilkantha Sundarijal – 1 Day
+  - Shivapuri Peak – 1 Day
+  - Chisapani Nagarkot
+  - Bandipur Hiking
+  - Namobuddha Hiking
+- FAQs
+- Blog
+- Contact
+
+---
+
+## 5. HOMEPAGE SECTIONS
+
+1. Top bar (contact + social)
+2. Sticky navbar with logo + dropdowns + CTA button "Book Now"
+3. Hero — full-width image slider (3 slides), headline, subheadline, CTA buttons
+4. Departing Soon — table with: Trip Name | Departure | Status | Price | Enquire Now
+5. Trending Trekking Packages — 6 cards (image, title, destination, duration, price)
+6. About Section — headline + 4 USP blocks (team, safety, ethics, satisfaction)
+7. Traveller's Choice Tour Packages — 3 cards
+8. Destinations — 3 image cards (Nepal, Bhutan, Tibet)
+9. Volunteering Section — 3 program cards
+10. Reviews — TripAdvisor badge + 4 client review cards
+11. Video Reviews — YouTube embed
+12. Blog — 3 latest post cards
+13. Certifications — 4 logos (NPL, NTB, TAAN, NMA)
+14. Footer — logo, links, social icons, copyright
+
+---
+
+## 6. PACKAGE CARD COMPONENT (reusable)
+Fields:
+- Image (full width top)
+- Title
+- Destination badge
+- Duration
+- Price (From $XXX)
+- Difficulty (Easy / Moderate / Strenuous)
+- Group size
+- CTA: "View Details" button
+
+---
+
+## 7. DEPARTING SOON TABLE
+Columns: Trip Name | Departure Date | Trip Status | Price | Action
+Sample data:
+- Annapurna Base Camp Trek – 13 Days | Flexible | Guaranteed | $845 | Enquire Now
+- Manaslu Larke Pass Trek – 16 Days  | Flexible | Guaranteed | $1120 | Enquire Now
+- Annapurna Circuit Trek – 15 Days   | Flexible | Guaranteed | $1125 | Enquire Now
+- Everest Base Camp Trek – 15 Days   | Flexible | Guaranteed | $1125 | Enquire Now
+
+---
+
+## 8. CONTACT PAGE
+Form fields: Full Name | Email | Phone | Country | Trip Interested In | 
+             Travel Date | Group Size | Message | Submit
+Also show: Address, Phone, Email, Map embed placeholder, Social links
+
+---
+
+## 9. VOLUNTEERING PROGRAMS
+- Teaching and Child Development
+- Physiotherapy Volunteer Work
+- Medical & Healthcare Volunteer
+- Orphanage & Social Work
+- Kathmandu Chitwan Pokhara Tour + Volunteering
+
+---
+
+## 10. CLIENT REVIEWS
+- Leila Deng, China — Teaching and Travelling program
+- Kylie Ann Newburn, New Zealand — Annapurna Circuit Trek
+- Trine Faugstade, USA — Annapurna Base Trek (14 days)
+- Filip Froyen, USA — More Than Just Trekking
+
+---
+
+## 11. BLOG POSTS (latest 3)
+- Best Time to Visit Temples in Nepal
+- How to Choose the Best Trekking Agency in Nepal?
+- Top 10 Trekking Destinations in Nepal with Cost Breakdown (2026 Guide)
+
+---
+
+## 12. FUTURE DJANGO INTEGRATION NOTES
+- All package data (name, duration, price, difficulty, image, description) 
+  to become Django models
+- Contact form to POST to Django view
+- Blog posts to be served from Django + DB
+- Package detail pages to be Django templates with dynamic slugs
+- Keep all HTML structured with clear IDs and class names for easy 
+  Django template conversion
