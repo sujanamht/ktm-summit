@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -42,18 +42,13 @@
 
   <body class="font-sans text-gray-900">
 
-    <!-- ================================================================
-         TOP BAR — REUSABLE SNIPPET
-         Copy everything between the TOP BAR markers to all pages.
-         ================================================================ -->
-    <div id="top-bar" class="bg-primary-dark text-white text-xs">
+    <!--TOP BAR — REUSABLE SNIPPET -->
+<!-- <div id="top-bar" class="relative bg-primary-dark text-white text-xs" style="z-index:60;">
       <div class="max-w-7xl mx-auto px-4 py-1.5 flex flex-wrap items-center justify-between gap-y-1.5">
 
-        <!-- Left: Email & Phone -->
         <div class="flex flex-wrap items-center gap-x-5 gap-y-1">
           <a href="mailto:kathmandusummitadventure@gmail.com"
              class="flex items-center gap-1.5 hover:text-secondary transition-colors">
-            <!-- Email icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" fill="none"
                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round"
@@ -63,8 +58,7 @@
           </a>
           <a href="tel:+9779841537393"
              class="flex items-center gap-1.5 hover:text-secondary transition-colors">
-            <!-- Phone icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" fill="none"
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" fill="none"
                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round"
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -73,10 +67,8 @@
           </a>
         </div>
 
-        <!-- Right: Social icons -->
         <div class="flex items-center gap-3">
 
-          <!-- Facebook -->
           <a href="https://facebook.com/kathmandusummitadventure" target="_blank" rel="noopener"
              aria-label="Facebook" class="hover:text-secondary transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -84,7 +76,6 @@
             </svg>
           </a>
 
-          <!-- Instagram -->
           <a href="https://instagram.com/kathmandusummitadventure" target="_blank" rel="noopener"
              aria-label="Instagram" class="hover:text-secondary transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -92,15 +83,13 @@
             </svg>
           </a>
 
-          <!-- TikTok -->
-          <a href="https://tiktok.com/@kathmandusummitadventure" target="_blank" rel="noopener"
+            <a href="https://tiktok.com/@kathmandusummitadventure" target="_blank" rel="noopener"
              aria-label="TikTok" class="hover:text-secondary transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
             </svg>
           </a>
 
-          <!-- LinkedIn -->
           <a href="https://linkedin.com/company/kathmandusummitadventure" target="_blank" rel="noopener"
              aria-label="LinkedIn" class="hover:text-secondary transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -108,7 +97,6 @@
             </svg>
           </a>
 
-          <!-- Twitter / X -->
           <a href="https://twitter.com/kathmandusummit" target="_blank" rel="noopener"
              aria-label="Twitter / X" class="hover:text-secondary transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -116,7 +104,6 @@
             </svg>
           </a>
 
-          <!-- YouTube -->
           <a href="https://youtube.com/@kathmandusummitadventure" target="_blank" rel="noopener"
              aria-label="YouTube" class="hover:text-secondary transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -126,19 +113,11 @@
 
         </div>
       </div>
-    </div>
-    <!-- ================================================================
-         END TOP BAR
-         ================================================================ -->
+    </div> -->
+    <!--END TOP BAR -->
 
-
-    <!-- ================================================================
-         STICKY NAVBAR — REUSABLE SNIPPET
-         Copy everything between the NAVBAR markers to all pages.
-         NOTE: The <nav> uses position:relative so the Trekking mega-menu
-         (whose <li> is NOT relative) anchors to the nav edges.
-         ================================================================ -->
-    <nav id="main-nav" class="bg-primary text-white sticky top-0 z-50 shadow-lg relative">
+    <!-- navbar  -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background-color: transparent;">
 
       <!-- Hidden checkbox — powers the mobile hamburger with NO JavaScript.
            Must be the first child of <nav> so the peer-checked selector
@@ -151,8 +130,7 @@
 
           <!-- ── Logo ─────────────────────────────────────────────── -->
           <a href="index.html" class="flex-shrink-0 flex flex-col leading-tight py-2">
-            <span class="text-secondary font-bold text-base sm:text-lg tracking-wide">Kathmandu Summit</span>
-            <span class="text-white/90 font-semibold text-xs sm:text-sm tracking-widest uppercase">Adventure</span>
+            <img id="nav-logo" src="assets/logo_nav.png" alt="Kathmandu Summit Adventure Logo" class="w-auto">
           </a>
 
           <!-- ── Desktop nav links (xl and above) ──────────────────── -->
@@ -161,7 +139,8 @@
             <!-- Home -->
             <li>
               <a href="index.html"
-                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Home
               </a>
             </li>
@@ -169,7 +148,8 @@
             <!-- Nepal ▾ -->
             <li class="group relative">
               <a href="tours.html"
-                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Nepal
                 <svg class="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -200,7 +180,8 @@
             <!-- Bhutan ▾ -->
             <li class="group relative">
               <a href="bhutan.html"
-                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Bhutan
                 <svg class="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -218,7 +199,8 @@
             <!-- Tibet ▾ -->
             <li class="group relative">
               <a href="tibet.html"
-                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Tibet
                 <svg class="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -240,7 +222,8 @@
                  itself against the <nav> (which IS relative), spanning full width. -->
             <li class="group">
               <a href="trekking.html"
-                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Trekking
                 <svg class="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -352,7 +335,8 @@
             <!-- Placements ▾ -->
             <li class="group relative">
               <a href="volunteering.html"
-                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Placements
                 <svg class="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -372,7 +356,8 @@
             <!-- Hiking ▾ -->
             <li class="group relative">
               <a href="hiking.html"
-                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center gap-1 px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Hiking
                 <svg class="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -393,7 +378,8 @@
             <!-- FAQs -->
             <li>
               <a href="faqs.html"
-                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 FAQs
               </a>
             </li>
@@ -401,7 +387,8 @@
             <!-- Blog -->
             <li>
               <a href="blog.html"
-                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Blog
               </a>
             </li>
@@ -409,7 +396,8 @@
             <!-- Contact -->
             <li>
               <a href="contact.html"
-                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap">
+                 class="flex items-center px-2.5 h-full hover:text-secondary hover:bg-primary-dark/40 transition-colors whitespace-nowrap"
+                 style="color: white;">
                 Contact
               </a>
             </li>
@@ -624,76 +612,153 @@
       <!-- ── End mobile menu ──────────────────────────────────────── -->
 
     </nav>
-    <!-- ================================================================
-         END STICKY NAVBAR
-         ================================================================ -->
+    <!--  END STICKY NAVBAR -->
 
 
     <!-- ── Main content ─────────────────────────────────────────────── -->
-    <main>
+    <main >
+<!-- HERO CAROUSEL -->
+<section id="hero-carousel" class="relative overflow-hidden" style="height: 100vh; min-height: 600px;">
 
-      <!-- ============================================================
-           HERO SECTION
-           ============================================================ -->
-      <section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
-               style="background-color: #1A3C5E;">
-
-        <!-- Dark overlay (swap bg-color for a bg-[url(...)] image later) -->
-        <div class="absolute inset-0 bg-black/50"></div>
-
-        <!-- Centered content -->
-        <div class="relative z-10 text-center px-4 max-w-3xl mx-auto">
-
-          <!-- Small tag / eyebrow -->
-          <span class="inline-block bg-secondary/20 border border-secondary text-secondary
-                       text-xs sm:text-sm font-semibold tracking-widest uppercase
-                       px-4 py-1.5 rounded-full mb-6">
-            Exciting Adventure Deals: 2025 | 2026
-          </span>
-
-          <!-- H1 -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-            Discover the Culture, People, and Stunning Landscapes of Nepal.
-          </h1>
-
-          <!-- Subtext -->
-          <p class="text-base sm:text-lg md:text-xl text-white/80 font-medium tracking-wide mb-8">
-            Tour. Trekking. Volunteering. Internship.
-          </p>
-
-          <!-- CTA buttons -->
-          <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="trekking.html"
-               class="bg-secondary hover:bg-secondary-dark text-white font-semibold
-                      text-sm sm:text-base px-7 py-3 rounded transition-colors shadow-lg">
-              Explore Packages
-            </a>
-            <a href="contact.html"
-               class="border-2 border-white text-white hover:bg-white hover:text-primary
-                      font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors">
-              Contact Us
-            </a>
-          </div>
-
+  <!-- Slide 1 -->
+  <div class="carousel-slide absolute inset-0 transition-opacity duration-700" style="background: url('assets/images/mountain.jpg') center/cover no-repeat;">
+    <div class="absolute inset-0 bg-black/75"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pb-4">
+      <div class="max-w-3xl mx-auto mt-48">
+        <span class="inline-block bg-secondary/20 border border-secondary text-secondary text-xs sm:text-sm font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+          Exciting Adventure Deals: 2025 | 2026
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+          Discover Nepal's Majestic Himalayas
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-white/80 font-medium tracking-wide mb-8">
+          Tour. Trekking. Volunteering. Internship.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="trekking.html" class="bg-secondary hover:bg-secondary-dark text-white font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors shadow-lg">
+            Explore Packages
+          </a>
+          <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors">
+            Contact Us
+          </a>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Scroll-down arrow -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <svg class="w-7 h-7 text-white/60" fill="none" stroke="currentColor"
-               stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-          </svg>
+
+  <!-- Slide 2 -->
+
+<div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700" style="background: url('assets/images/lumbini.jpg') center/cover no-repeat;">
+  <div class="absolute inset-0 bg-black/75"></div>
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pb-4">
+    <div class="max-w-3xl mx-auto mt-48">
+      <span class="inline-block bg-secondary/20 border border-secondary text-secondary text-xs sm:text-sm font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+        Exciting Adventure Deals: 2025 | 2026
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+        Explore Ancient Temples &amp; Monuments
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl text-white/80 font-medium tracking-wide mb-8">
+        Tour. Trekking. Volunteering. Internship.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="trekking.html" class="bg-secondary hover:bg-secondary-dark text-white font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors shadow-lg">
+          Explore Packages
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- Slide 3 -->
+  <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700" style="background: url('assets/images/everest_base.png') center/cover no-repeat;">
+    <div class="absolute inset-0 bg-black/75"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pb-4">
+      <div class="max-w-3xl mx-auto mt-48">
+        <span class="inline-block bg-secondary/20 border border-secondary text-secondary text-xs sm:text-sm font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+          Exciting Adventure Deals: 2025 | 2026
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+          Trek to Everest Base Camp
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-white/80 font-medium tracking-wide mb-8">
+          Tour. Trekking. Volunteering. Internship.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="trekking.html" class="bg-secondary hover:bg-secondary-dark text-white font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors shadow-lg">
+            Explore Packages
+          </a>
+          <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors">
+            Contact Us
+          </a>
         </div>
+      </div>
+    </div>
+  </div>
 
-      </section>
-      <!-- ============================================================
-           END HERO SECTION
-           ============================================================ -->
+  <!-- Slide 4 -->
+  <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700" style="background: url('assets/images/carousel.jpg') center/cover no-repeat;">
+    <div class="absolute inset-0 bg-black/75"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pb-4">
+      <div class="max-w-3xl mx-auto mt-48">
+        <span class="inline-block bg-secondary/20 border border-secondary text-secondary text-xs sm:text-sm font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+          Exciting Adventure Deals: 2025 | 2026
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+          Experience Culture &amp; Adventure
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-white/80 font-medium tracking-wide mb-8">
+          Tour. Trekking. Volunteering. Internship.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="trekking.html" class="bg-secondary hover:bg-secondary-dark text-white font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors shadow-lg">
+            Explore Packages
+          </a>
+          <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-sm sm:text-base px-7 py-3 rounded transition-colors">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prev Arrow -->
+  <button id="carousel-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full w-11 h-11 flex items-center justify-center transition-colors" aria-label="Previous slide">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+    </svg>
+  </button>
+
+  <!-- Next Arrow -->
+  <button id="carousel-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full w-11 h-11 flex items-center justify-center transition-colors" aria-label="Next slide">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </button>
+
+  <!-- Scroll-Down Arrow + Dot Indicators (stacked) -->
+  <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+    <!-- Scroll-down icon -->
+    <div class="animate-bounce">
+   <i class="fa-solid fa-chevron-down text-white/60 text-lg"></i>
+    </div>
+    <!-- Dots -->
+    <div class="flex gap-1.5">
+      <button class="carousel-dot w-1 h-1 rounded-full bg-secondary transition-colors" aria-label="Slide 1"></button>
+      <button class="carousel-dot w-1 h-1 rounded-full bg-white/50 transition-colors" aria-label="Slide 2"></button>
+      <button class="carousel-dot w-1 h-1 rounded-full bg-white/50 transition-colors" aria-label="Slide 3"></button>
+      <button class="carousel-dot w-1 h-1 rounded-full bg-white/50 transition-colors" aria-label="Slide 4"></button>
+    </div>
+  </div>
+
+</section>
+<!-- END HERO CAROUSEL -->
 
 
-      <!-- ============================================================
-           DEPARTING SOON SECTION
-           ============================================================ -->
+      <!-- DEPARTING SOON SECTION -->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
 
@@ -821,15 +886,11 @@
 
         </div>
       </section>
-      <!-- ============================================================
-           END DEPARTING SOON SECTION
-           ============================================================ -->
+      <!--  END DEPARTING SOON SECTION  -->
 
 
 
-      <!-- ============================================================
-           TRENDING TREKKING PACKAGES
-           ============================================================ -->
+      <!--     TRENDING TREKKING PACKAGES -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
 
@@ -979,14 +1040,10 @@
 
         </div>
       </section>
-      <!-- ============================================================
-           END TRENDING TREKKING PACKAGES
-           ============================================================ -->
+      <!-- END TRENDING TREKKING PACKAGES      -->
 
 
-      <!-- ============================================================
-           ABOUT / USP SECTION
-           ============================================================ -->
+      <!--  ABOUT / USP SECTION -->
       <section class="py-16" style="background-color: #F9FAFB;">
         <div class="max-w-7xl mx-auto px-4">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -1083,9 +1140,7 @@
           </div>
         </div>
       </section>
-      <!-- ============================================================
-           END ABOUT / USP SECTION
-           ============================================================ -->
+      <!-- END ABOUT / USP SECTION -->
 
 
       <!-- ============================================================
@@ -1965,5 +2020,67 @@
          END FOOTER
          ================================================================ -->
 
+ 
+
   </body>
 </html>
+<script>
+  // ── Navbar scroll effect ──────────────────────────────────────────
+function handleScroll() {
+  var nav = document.getElementById('navbar');
+  var topBar = document.getElementById('top-bar');
+  var logo = document.getElementById('nav-logo');
+  var offset = topBar ? topBar.offsetHeight : 40;
+
+  if (window.scrollY > offset) {
+    nav.style.top = '0';
+    nav.style.backgroundColor = '#1A3C5E';
+    nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.4)';
+    if (logo) logo.style.height = '40px';
+  } else {
+    nav.style.top = (offset - window.scrollY) + 'px';
+    nav.style.backgroundColor = 'transparent';
+    nav.style.boxShadow = 'none';
+    if (logo) logo.style.height = '60px';
+  }
+}
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('DOMContentLoaded', handleScroll);
+
+  // ── Hero carousel ─────────────────────────────────────────────────
+  (function () {
+    var slides = document.querySelectorAll('.carousel-slide');
+    var dots   = document.querySelectorAll('.carousel-dot');
+    var current = 0;
+    var total   = slides.length;
+    var timer;
+
+    function goTo(index) {
+      slides[current].classList.add('opacity-0');
+      dots[current].classList.remove('bg-secondary');
+      dots[current].classList.add('bg-white/50');
+      current = (index + total) % total;
+      slides[current].classList.remove('opacity-0');
+      dots[current].classList.remove('bg-white/50');
+      dots[current].classList.add('bg-secondary');
+      resetTimer();
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 5000);
+    }
+
+    document.getElementById('carousel-next').addEventListener('click', next);
+    document.getElementById('carousel-prev').addEventListener('click', prev);
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goTo(i); });
+    });
+
+    resetTimer();
+  })();
+</script>
