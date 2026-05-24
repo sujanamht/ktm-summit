@@ -1503,115 +1503,298 @@
             </div>
           </div>
 
-          <!-- 2x2 review grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Reviews carousel -->
+          <div id="reviews-carousel" class="relative select-none">
 
-            <!-- Review 1 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span class="text-primary font-bold text-base">LD</span>
+            <!-- Prev arrow -->
+            <button id="rev-prev" aria-label="Previous review"
+              class="absolute left-1 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/95 shadow-md border border-gray-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+
+            <!-- Next arrow -->
+            <button id="rev-next" aria-label="Next review"
+              class="absolute right-1 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/95 shadow-md border border-gray-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+
+            <!-- Clip zone: mx-6 sm:mx-12 leaves room for arrows; py-8 lets center-card shadow breathe -->
+            <div class="overflow-hidden mx-6 sm:mx-12 py-8">
+              <div id="reviews-track" class="flex items-stretch" style="will-change: transform;">
+
+                <!-- Review 1 -->
+                <div class="review-card bg-white rounded-xl p-6 border border-gray-100 flex flex-col gap-4 shrink-0">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <span class="text-primary font-bold text-base">LD</span>
+                    </div>
+                    <div>
+                      <p class="font-bold text-gray-900 text-sm">Leila Deng</p>
+                      <p class="text-gray-500 text-xs">China</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                  <p class="text-xs font-semibold text-secondary uppercase tracking-wide">Teaching and Travelling</p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    "An incredibly fulfilling experience. The team made everything so smooth — from the volunteering placement to the day trips around Kathmandu. Highly recommended for anyone who wants to give back while exploring Nepal."
+                  </p>
+                  <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
+                    Read More
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
                 </div>
-                <div>
-                  <p class="font-bold text-gray-900 text-sm">Leila Deng</p>
-                  <p class="text-gray-500 text-xs">China</p>
+
+                <!-- Review 2 -->
+                <div class="review-card bg-white rounded-xl p-6 border border-gray-100 flex flex-col gap-4 shrink-0">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <span class="text-primary font-bold text-base">KN</span>
+                    </div>
+                    <div>
+                      <p class="font-bold text-gray-900 text-sm">Kylie Ann Newburn</p>
+                      <p class="text-gray-500 text-xs">New Zealand</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                  <p class="text-xs font-semibold text-secondary uppercase tracking-wide">Annapurna Circuit</p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    "Kathmandu Summit Adventure organised the most incredible trek. Our guide was knowledgeable, caring, and made the whole Annapurna Circuit feel safe and magical. I will be back for Everest next year!"
+                  </p>
+                  <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
+                    Read More
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
                 </div>
-                <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
+
+                <!-- Review 3 -->
+                <div class="review-card bg-white rounded-xl p-6 border border-gray-100 flex flex-col gap-4 shrink-0">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <span class="text-primary font-bold text-base">TF</span>
+                    </div>
+                    <div>
+                      <p class="font-bold text-gray-900 text-sm">Trine Faugstade</p>
+                      <p class="text-gray-500 text-xs">USA</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                  <p class="text-xs font-semibold text-secondary uppercase tracking-wide">Best Himalaya Trip</p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    "Without a doubt the best Himalaya trip I have ever taken. Every detail was perfectly planned. The scenery was breathtaking and the support from the local team was outstanding from start to finish."
+                  </p>
+                  <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
+                    Read More
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
                 </div>
+
+                <!-- Review 4 -->
+                <div class="review-card bg-white rounded-xl p-6 border border-gray-100 flex flex-col gap-4 shrink-0">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <span class="text-primary font-bold text-base">FF</span>
+                    </div>
+                    <div>
+                      <p class="font-bold text-gray-900 text-sm">Filip Froyen</p>
+                      <p class="text-gray-500 text-xs">USA</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                  <p class="text-xs font-semibold text-secondary uppercase tracking-wide">More Than Just Trekking</p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    "This was more than just a trekking holiday — it was a life-changing journey. The cultural immersion, the warm hospitality of the local people, and the professionalism of the team made it truly unforgettable."
+                  </p>
+                  <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
+                    Read More
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
+                </div>
+
               </div>
-              <p class="text-xs font-semibold text-secondary uppercase tracking-wide">Teaching and Travelling</p>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                "An incredibly fulfilling experience. The team made everything so smooth — from the volunteering placement to the day trips around Kathmandu. Highly recommended for anyone who wants to give back while exploring Nepal."
-              </p>
-              <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
-                Read More
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-              </a>
             </div>
-
-            <!-- Review 2 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span class="text-primary font-bold text-base">KN</span>
-                </div>
-                <div>
-                  <p class="font-bold text-gray-900 text-sm">Kylie Ann Newburn</p>
-                  <p class="text-gray-500 text-xs">New Zealand</p>
-                </div>
-                <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </div>
-              </div>
-              <p class="text-xs font-semibold text-secondary uppercase tracking-wide">Annapurna Circuit</p>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                "Kathmandu Summit Adventure organised the most incredible trek. Our guide was knowledgeable, caring, and made the whole Annapurna Circuit feel safe and magical. I will be back for Everest next year!"
-              </p>
-              <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
-                Read More
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Review 3 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span class="text-primary font-bold text-base">TF</span>
-                </div>
-                <div>
-                  <p class="font-bold text-gray-900 text-sm">Trine Faugstade</p>
-                  <p class="text-gray-500 text-xs">USA</p>
-                </div>
-                <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </div>
-              </div>
-              <p class="text-xs font-semibold text-secondary uppercase tracking-wide">Best Himalaya Trip</p>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                "Without a doubt the best Himalaya trip I have ever taken. Every detail was perfectly planned. The scenery was breathtaking and the support from the local team was outstanding from start to finish."
-              </p>
-              <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
-                Read More
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Review 4 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span class="text-primary font-bold text-base">FF</span>
-                </div>
-                <div>
-                  <p class="font-bold text-gray-900 text-sm">Filip Froyen</p>
-                  <p class="text-gray-500 text-xs">USA</p>
-                </div>
-                <div class="ml-auto flex gap-0.5 text-secondary text-base" aria-label="5 stars">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </div>
-              </div>
-              <p class="text-xs font-semibold text-secondary uppercase tracking-wide">More Than Just Trekking</p>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                "This was more than just a trekking holiday — it was a life-changing journey. The cultural immersion, the warm hospitality of the local people, and the professionalism of the team made it truly unforgettable."
-              </p>
-              <a href="#" class="inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start">
-                Read More
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-              </a>
-            </div>
-
           </div>
-          <!-- End review grid -->
+          <!-- End reviews carousel -->
+
+          <script>
+          (function () {
+            var GAP = 20;          // px gap between cards
+            var DURATION = 500;    // ms transition duration
+            var CLONE_COUNT = 2;   // clones on each side (≥ 1; 2 covers adjacent cards)
+            var AUTO_DELAY = 4000; // ms between auto-advances
+
+            var carousel = document.getElementById('reviews-carousel');
+            var track    = document.getElementById('reviews-track');
+            var prevBtn  = document.getElementById('rev-prev');
+            var nextBtn  = document.getElementById('rev-next');
+
+            // ── 1. Collect originals and build clone buffer ──────────────────
+            var originals = Array.from(track.children);
+            var N = originals.length; // 4
+
+            // Prepend clones of last CLONE_COUNT cards (in order: [N-2, N-1, …])
+            for (var i = CLONE_COUNT - 1; i >= 0; i--) {
+              var pre = originals[N - CLONE_COUNT + i].cloneNode(true);
+              pre.setAttribute('data-clone', 'pre');
+              track.insertBefore(pre, track.firstChild);
+            }
+            // Append clones of first CLONE_COUNT cards
+            for (var j = 0; j < CLONE_COUNT; j++) {
+              var post = originals[j].cloneNode(true);
+              post.setAttribute('data-clone', 'post');
+              track.appendChild(post);
+            }
+            // Final order: [N-2_c, N-1_c, 0, 1, 2, 3, 0_c, 1_c]
+
+            var allCards = Array.from(track.children); // length = N + 2*CLONE_COUNT = 8
+            var currentIdx = CLONE_COUNT;              // start at real card 0
+
+            // ── 2. Sizing ────────────────────────────────────────────────────
+            var cardW = 0;
+
+            function computeSizes() {
+              var clipDiv = track.parentElement;
+              var cw = clipDiv.offsetWidth;
+              // Fit exactly: half_card + GAP + full_card + GAP + half_card = cw
+              // => 2*cardW + 2*GAP = cw  => cardW = (cw - 2*GAP) / 2
+              cardW = Math.floor((cw - 2 * GAP) / 2);
+              track.style.gap = GAP + 'px';
+              allCards.forEach(function (c) {
+                c.style.width    = cardW + 'px';
+                c.style.flexShrink = '0';
+              });
+            }
+
+            // ── 3. Rendering ─────────────────────────────────────────────────
+            function trackTranslate(idx) {
+              var clipDiv = track.parentElement;
+              var cw = clipDiv.offsetWidth;
+              var cardCenter = idx * (cardW + GAP) + cardW / 2;
+              return cw / 2 - cardCenter;
+            }
+
+            function render(animate) {
+              var easing = 'cubic-bezier(0.4, 0, 0.2, 1)';
+              var cardTr = animate
+                ? 'transform ' + DURATION + 'ms ' + easing + ', opacity ' + DURATION + 'ms ease, box-shadow ' + DURATION + 'ms ease'
+                : 'none';
+
+              if (!animate) {
+                track.style.transition = 'none';
+                track.getBoundingClientRect(); // force reflow so snap is instant
+              } else {
+                track.style.transition = 'transform ' + DURATION + 'ms ' + easing;
+              }
+              track.style.transform = 'translateX(' + trackTranslate(currentIdx) + 'px)';
+
+              allCards.forEach(function (card, i) {
+                var dist = i - currentIdx;
+                card.style.transition = cardTr;
+                if (dist === 0) {
+                  card.style.transform  = 'scale(1)';
+                  card.style.opacity    = '1';
+                  card.style.boxShadow  = '0 8px 28px rgba(26,60,94,0.18)';
+                  card.style.cursor     = 'default';
+                  card.style.pointerEvents = 'auto';
+                } else if (Math.abs(dist) === 1) {
+                  card.style.transform  = 'scale(0.85)';
+                  card.style.opacity    = '0.6';
+                  card.style.boxShadow  = 'none';
+                  card.style.cursor     = 'pointer';
+                  card.style.pointerEvents = 'auto';
+                } else {
+                  card.style.transform  = 'scale(0.85)';
+                  card.style.opacity    = '0';
+                  card.style.boxShadow  = 'none';
+                  card.style.cursor     = 'default';
+                  card.style.pointerEvents = 'none';
+                }
+              });
+            }
+
+            // ── 4. Navigation ────────────────────────────────────────────────
+            var busy = false;
+            var busyTimer = null;
+
+            function goTo(idx, animate) {
+              if (busy) return;
+              currentIdx = idx;
+              if (animate) {
+                busy = true;
+                clearTimeout(busyTimer);
+                busyTimer = setTimeout(function () { busy = false; }, DURATION + 80);
+              }
+              render(animate !== false);
+            }
+
+            function next() { goTo(currentIdx + 1, true); }
+            function prev() { goTo(currentIdx - 1, true); }
+
+            // After each animated transition, snap out of clone zones
+            track.addEventListener('transitionend', function (e) {
+              if (e.target !== track || e.propertyName !== 'transform') return;
+              busy = false;
+              clearTimeout(busyTimer);
+              if (currentIdx >= N + CLONE_COUNT) {
+                currentIdx -= N;
+                render(false);
+              } else if (currentIdx < CLONE_COUNT) {
+                currentIdx += N;
+                render(false);
+              }
+            });
+
+            nextBtn.addEventListener('click', next);
+            prevBtn.addEventListener('click', prev);
+
+            // Click on an adjacent card to bring it to center
+            allCards.forEach(function (card, i) {
+              card.addEventListener('click', function () {
+                var dist = i - currentIdx;
+                if (dist === 1)  next();
+                if (dist === -1) prev();
+              });
+            });
+
+            // ── 5. Auto-advance (pause on hover) ─────────────────────────────
+            var autoTimer = null;
+            function startAuto() { autoTimer = setInterval(next, AUTO_DELAY); }
+            function stopAuto()  { clearInterval(autoTimer); }
+
+            carousel.addEventListener('mouseenter', stopAuto);
+            carousel.addEventListener('mouseleave', startAuto);
+
+            // ── 6. Resize handler ────────────────────────────────────────────
+            window.addEventListener('resize', function () {
+              computeSizes();
+              render(false);
+            });
+
+            // ── 7. Init ──────────────────────────────────────────────────────
+            computeSizes();
+            render(false);
+            startAuto();
+          })();
+          </script>
 
         </div>
       </section>
@@ -1803,7 +1986,7 @@
          FOOTER — REUSABLE SNIPPET
          Copy everything between the FOOTER markers to all pages.
          ================================================================ -->
-    <footer id="site-footer" class="bg-primary-dark text-white">
+    <footer id="site-footer" class="bg-primary-dark text-white" style="border-top: 3px solid #e07b00;">
 
       <!-- Footer main content -->
       <div class="max-w-7xl mx-auto px-4 pt-12 pb-8">
