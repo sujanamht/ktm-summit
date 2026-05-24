@@ -80,6 +80,26 @@ details[open] > .itinerary-content {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Footer: link underline slide-in on hover ── */
+#site-footer a {
+  background-image: linear-gradient(#e07b00, #e07b00);
+  background-position: left bottom;
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: color 0.15s ease, background-size 0.3s ease;
+}
+#site-footer a:hover {
+  background-size: 100% 1px;
+}
+
+/* ── Footer: social icon hover ring glow ── */
+#site-footer .footer-social {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#site-footer .footer-social:hover {
+  box-shadow: 0 0 0 2px rgba(224, 123, 0, 0.5);
+}
+
 /* ── Hero carousel height & slide positioning ── */
 #hero-carousel {
   height: 100vh !important;
