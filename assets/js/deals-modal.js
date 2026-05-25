@@ -134,6 +134,6 @@
       }
     });
   }
-
-  window.addEventListener('load', showModal);
+// resume model, just uncomment below line  
+  // window.addEventListener('load', showModal); 
 })();
