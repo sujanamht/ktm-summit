@@ -110,3 +110,92 @@ details[open] > .itinerary-content {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE: About / USP banner
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Tablet and below (≤ 1024px): stack description + USP vertically ── */
+@media (max-width: 1024px) {
+  /* Outer two-col row → single column */
+  .bg-primary-dark .grid.grid-cols-2.gap-8 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Remove right padding, center text in description column */
+  .bg-primary-dark .grid.grid-cols-2.gap-8 > div.pr-8 {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* Center the Learn More CTA button */
+  .bg-primary-dark .grid.grid-cols-2.gap-8 > div.pr-8 a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ── Mobile only (≤ 640px): collapse USP 2×2 grid → single column ── */
+@media (max-width: 640px) {
+  .bg-primary-dark .grid.grid-cols-2.gap-8 > .relative.grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Remove right-side divider borders that look odd in single-column */
+  .bg-primary-dark .grid.grid-cols-2.gap-8 > .relative.grid > div {
+    border-right: none !important;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE: Client Reviews carousel
+   ══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  /* Reserve space at bottom for repositioned arrow buttons */
+  #reviews-carousel {
+    padding-bottom: 3.5rem;
+  }
+
+  /* Clip zone: remove horizontal margins so center card fills the container;
+     fade out the side-peek half-cards with a horizontal mask gradient */
+  #reviews-carousel > div {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 26%,
+      black 74%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 26%,
+      black 74%,
+      transparent 100%
+    );
+  }
+
+  /* Move arrows from vertical-center overlay → bottom center of carousel */
+  #rev-prev,
+  #rev-next {
+    top: auto !important;
+    transform: none !important;
+    bottom: 0;
+  }
+
+  #rev-prev {
+    left: calc(50% - 48px);
+    right: auto;
+  }
+
+  #rev-next {
+    right: calc(50% - 48px);
+    left: auto;
+  }
+}
